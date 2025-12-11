@@ -15,6 +15,13 @@ A Lit-based web component for rendering ChordPro formatted songs with interactiv
 
 ## Installation
 
+[![npm 
+version](https://badge.fury.io/js/chordpro-renderer.svg
+)](https://www.npmjs.com/package/chordpro-renderer)
+[![npm downloads](https://img.shields.io/npm/dm/chordpr
+o-renderer.svg)](https://www.npmjs.com/package/chordpro
+-renderer)
+
 ```bash
 npm install chordpro-renderer
 ```

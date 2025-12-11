@@ -1,6 +1,6 @@
 {
   "name": "chordpro-renderer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Lit web component for rendering ChordPro formatted songs with chord diagrams",
   "type": "module",
   "main": "./dist/chordpro-renderer.umd.cjs",
@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/parent-tobias/chordpro-renderer.git"
+    "url": "git+https://github.com/parent-tobias/chordpro-renderer.git"
   },
   "bugs": {
     "url": "https://github.com/parent-tobias/chordpro-renderer/issues"
