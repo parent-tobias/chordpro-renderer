@@ -32,16 +32,16 @@
     "lit",
     "chord-sheet"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Tobias Parent <parent.tobias@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/chordpro-renderer.git"
+    "url": "https://github.com/parent-tobias/chordpro-renderer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/chordpro-renderer/issues"
+    "url": "https://github.com/parent-tobias/chordpro-renderer/issues"
   },
-  "homepage": "https://github.com/yourusername/chordpro-renderer#readme",
+  "homepage": "https://github.com/parent-tobias/chordpro-renderer#readme",
   "dependencies": {
     "chord-component": "^0.1.2",
     "chordsheetjs": "^8.0.0",
