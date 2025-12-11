@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChordPro Renderer - Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #1a1a1a;
+      color: #f8f8f8;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 80vh;
+    }
+    chordpro-renderer {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>ChordPro Renderer Demo</h1>
+  <div class="container">
+    <chordpro-renderer
+      id="renderer"
+      show-chords="true"
+      chord-position="top"
+    ></chordpro-renderer>
+  </div>
+
+  <script type="module">
+    import './src/index.ts';
+
+    const exampleSong = `{title: Amazing Grace}
+{artist: Traditional}
+{key: G}
+
+{start_of_verse}
+[G]Amazing [C]grace how [G]sweet the sound
+That [G]saved a [D]wretch like [G]me
+I [G]once was [C]lost but [G]now I'm found
+Was [G]blind but [D]now I [G]see
+{end_of_verse}
+
+{start_of_verse}
+'Twas [G]grace that [C]taught my [G]heart to fear
+And [G]grace my [D]fears re[G]lieved
+How [G]precious [C]did that [G]grace appear
+The [G]hour I [D]first be[G]lieved
+{end_of_verse}
+
+{start_of_chorus}
+[G]Through many [C]dangers, [G]toils and snares
+I [G]have al[D]ready [G]come
+'Tis [G]grace hath [C]brought me [G]safe thus far
+And [G]grace will [D]lead me [G]home
+{end_of_chorus}`;
+
+    const renderer = document.getElementById('renderer');
+    renderer.content = exampleSong;
+
+    // Listen to events
+    renderer.addEventListener('chords-changed', (e) => {
+      console.log('Chords in song:', e.detail.chords);
+    });
+
+    renderer.addEventListener('instrument-changed', (e) => {
+      console.log('Instrument changed to:', e.detail.instrument);
+    });
+
+    renderer.addEventListener('mode-changed', (e) => {
+      console.log('Display mode changed to:', e.detail.mode);
+    });
+  </script>
+</body>
+</html>

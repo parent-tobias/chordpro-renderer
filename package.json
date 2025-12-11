@@ -1,0 +1,59 @@
+{
+  "name": "chordpro-renderer",
+  "version": "0.1.0",
+  "description": "Lit web component for rendering ChordPro formatted songs with chord diagrams",
+  "type": "module",
+  "main": "./dist/chordpro-renderer.umd.cjs",
+  "module": "./dist/chordpro-renderer.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/chordpro-renderer.js",
+      "require": "./dist/chordpro-renderer.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "chordpro",
+    "music",
+    "chord",
+    "song",
+    "renderer",
+    "web-component",
+    "lit",
+    "chord-sheet"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chordpro-renderer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chordpro-renderer/issues"
+  },
+  "homepage": "https://github.com/yourusername/chordpro-renderer#readme",
+  "dependencies": {
+    "chord-component": "^0.1.2",
+    "chordsheetjs": "^8.0.0",
+    "lit": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.2"
+  },
+  "peerDependencies": {
+    "chord-component": ">=0.1.0"
+  }
+}
